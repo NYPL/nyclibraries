@@ -1,0 +1,9 @@
+deploy:
+  provider: s3
+  access_key_id: AKIAJGKE6CCBB6BPHVOA
+  secret_access_key:
+    secure: eySICV5qxU27GI4IGOqgXsjj4AB4aRpQhir2QdRtzaWs4XkCpiSfwDhInZOrBnYegfy/UUh7tcDv2VRQrX6bZGEVcNLIJvuKAdgGcHGss2IqFXhVOmQqrIzrk1LJB1/HoN46pnEn9yVvi+/h4mJNEaPDpyV4hk6U+mlUoUSl4mD/kbyKL62kjfhEB62tOrFINN12TnjP6eG2eGchYKUnh7w8QMSJnJmC9Aq5E6i3aSL3lOptEUb81F/AbMmBE7i1dGz219cYMr2vW/D/ETMVO9rYVTw7gumqvHDP+BbnjQaQx3NH4S8K60Ls+PsIceiHqc4lIctv6UP2PdE9yEiuoloIH0JGYJcmPul7DX+SzYm6e6n7Td4JM2EZIIvdoPpvJCFz1mXqpwKGdI4LUWyrKZTf/L5lAed82DJNwVoSj2rw128j4CzNVRd4x7D98z6Y26zvKdDEvtog/eiNlvSjc4TU+UVbUTXl9KYXkVqxzQ5x45z4YaKk8XMjdRC52fXJPqlo3Zoe8HZRTHOXFMmPCTjXtsClumlER3+k+yHjMiTsyt/lvPW9SQ90FASFqnoG9iYJ66SzDW6p52E17A8g6F7vBONPr5TJObmTReP0JMe6G8RcCdNxhnieR0R7si4eRWDNshIuHGSteb0EZLbAH8I6UtAHMyZul9+oN0u+DXE=
+  bucket: qa-nyclibraries.org
+  acl: public_read
+  on:
+    repo: NYPL/newstart-2017
