@@ -1,9 +1,47 @@
 @import "normalize";
 @import "base";
+@import "colors";
+@import "general-mixins";
 @import "measurements";
 @import "typography";
 @import "media-queries";
 
 body {
   @include font-settings;
+
+
+}
+
+.hero {
+  background: $nypl-green;
+  color: $nypl-white;
+
+  span {}
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .header-image {
+
+  }
+}
+
+.library-logos {
+
+  &__blocks {
+    background: $nypl-light-blue;
+
+    &__logo-block {
+
+      a {
+        @include button;
+      }
+
+      .svg-icon {
+        height: 5rem;
+        fill: $nypl-dark-gray;
+      }
+    }
+  }
 }

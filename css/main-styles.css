@@ -621,4 +621,24 @@ body {
   font-size: 16px;
   line-height: 1.65; }
 
+.hero {
+  background: #799a05;
+  color: #fff; }
+  .hero h1 {
+    font-size: 3rem; }
+
+.library-logos__blocks {
+  background: #73c7e8; }
+  .library-logos__blocks__logo-block a {
+    border: 0.125rem solid #135772;
+    border-radius: 0.5rem;
+    color: #135772;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    text-transform: uppercase; }
+  .library-logos__blocks__logo-block .svg-icon {
+    height: 5rem;
+    fill: #080807; }
+
 /*# sourceMappingURL=main-styles.css.map */
