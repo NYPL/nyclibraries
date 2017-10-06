@@ -1,2 +1,10 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+
 .sass-cache/
 *.css.map
+
+# Ignore the /doc directory
+doc

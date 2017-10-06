@@ -1,0 +1,16 @@
+$is-ie: false !default;
+// $mobile-ie6: true !default;
+
+@mixin media($max-width, $min-width: false, $ignore-for-ie: false) {
+  @media (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin ie-lte($version) {
+  @if $is-ie {
+    @if $ie-version <= $version {
+      @content;
+    }
+  }
+}
