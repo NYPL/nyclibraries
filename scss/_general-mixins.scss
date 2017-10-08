@@ -1,6 +1,20 @@
 //
 // Define Global Mixins here:
 //
+
+// clearfix
+@mixin clearfix() {
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
 // Screen Reader only:
 @mixin screenreader-only {
   // to hide something from view but make it visible to screen readers
@@ -28,91 +42,4 @@
   text-decoration: none;
   text-transform: uppercase;
   width: 50%;
-}
-
-//
-// Layout Grid
-//
-
-@mixin full-width-wrapper($in-header: false) {
-  @if $in-header == false {
-    max-width: calc(#{$max-width - $general-padding} - (#{$logo-width + $general-padding}));
-    padding: $general-padding $general-padding $general-padding ($logo-width + $general-padding);
-  } @else {
-    max-width: calc(#{$max-width} - (#{$general-padding * 2}));
-    padding: 0 $general-padding;
-  }
-
-  position: relative;
-  margin: 0 auto;
-  @include clearfix;
-
-  @include media($mobile-breakpoint) {
-    @if $in-header == false {
-      padding-left: ($general-padding * 2);
-    } @else {
-      margin: 0;
-      padding: 0 #{$general-padding * 0.5};
-    }
-  }
-}
-
-@mixin row {
-  margin: 0 -0.5rem;
-  min-height: 1rem;
-  @include clearfix;
-}
-
-@mixin column-type(
-    $border: 0,
-    $float: left,
-    $margin-bottom: 1rem,
-    $width: auto) {
-  //border: 1px solid $nypl-red;
-  border: $border;
-  float: $float;
-  margin-bottom: $margin-bottom;
-  min-height: 1rem;
-  padding: 0 0.5rem;
-  width: $width;
-  @include clearfix;
-  @include box-sizing(border-box);
-
-  @include media($mobile-breakpoint) {
-    float: none;
-    padding: 0;
-    width: auto;
-  }
-}
-
-@mixin column-full {
-  @include column-type($float: none);
-}
-
-@mixin column-half {
-  @include column-type($width: $half);
-}
-
-@mixin column-one-quarter {
-  @include column-type($width: $one-quarter);
-}
-
-@mixin column-one-third {
-  @include column-type($width: $one-third);
-}
-
-@mixin column-two-thirds {
-  @include column-type($width: $two-thirds);
-}
-
-@mixin column-three-quarters {
-  @include column-type($width: $three-quarters);
-}
-
-@mixin column-offset($column-count) {
-  margin-left: percentage($column-count / 4);
-
-  @include media($mobile-breakpoint) {
-    margin-left: 0;
-  }
 }

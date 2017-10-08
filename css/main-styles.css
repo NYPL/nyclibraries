@@ -620,6 +620,30 @@ body {
   .hero h1 {
     font-size: 3rem; }
 
+.full-width-wrapper {
+  max-width: calc(82rem - (2rem));
+  padding: 0 1rem;
+  position: relative;
+  margin: 0 auto; }
+  .full-width-wrapper::before, .full-width-wrapper::after {
+    content: "";
+    display: table; }
+  .full-width-wrapper::after {
+    clear: both; }
+  @media (max-width: 483px) {
+    .full-width-wrapper {
+      margin: 0;
+      padding: 0 0.5rem; } }
+
+.row {
+  margin: 0 -0.5rem;
+  min-height: 1rem; }
+  .row::before, .row::after {
+    content: "";
+    display: table; }
+  .row::after {
+    clear: both; }
+
 .library-logos__blocks.logo-block {
   display: block;
   width: 33%; }
