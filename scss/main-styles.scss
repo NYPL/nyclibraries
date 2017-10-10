@@ -130,13 +130,27 @@ h4 {
         @include media($tabletscreen-breakpoint) {}
 
         @include media($mediumscreen-breakpoint) {
-          height: 9rem;
+          //height: 9rem;
         }
 
         @include media($xtrasmallscreen-breakpoint) {
 
         }
       } // /svg-container
+
+      svg {
+        margin: ($general-margin / 1.5);
+
+        @include media($mediumscreen-breakpoint) {
+          margin: $general-margin;
+          width: 50%;
+        }
+
+        @include media($xtrasmallscreen-breakpoint) {
+          width: 70%;
+        }
+      }
+
       //
       // Brooklyn logo
       //
@@ -156,10 +170,9 @@ h4 {
         }
 
         span {
-          //height: 1rem;
 
-          @include media($tabletscreen-breakpoint) {
-
+          @include media($xtrasmallscreen-breakpoint) {
+            height: 1.2rem;
           }
         }
       } // /brooklyn-logo
@@ -195,26 +208,23 @@ h4 {
             height: 4.5rem;
           }
         }
+
+        svg {
+
+          @include media(mediumscreen-breakpoint) {
+            width: 100%;
+          }
+
+          @include media($xtrasmallscreen-breakpoint) {
+            width: 50%;
+          }
+        }
       } // Queens logo
-
-      svg {
-        //border: 1px solid $nypl-light-blue;
-        margin: ($general-margin / 1.5);
-
-        @include media($mediumscreen-breakpoint) {
-          margin: $general-margin;
-          width: 50%;
-        }
-
-        @include media($xtrasmallscreen-breakpoint) {
-          width: 70%;
-        }
-      }
 
       span {
         display: block;
         line-height: 1.2;
-        height: 3rem;
+        height: 4rem;
         margin: $general-margin 0;
         width: 100%;
       }
@@ -241,12 +251,8 @@ h4 {
       } // /a
 
       .svg-icon {
-        // height: 5rem;
         fill: $nypl-dark-gray;
-
-        @include media($mediumscreen-breakpoint) {
-          //width: 50%;
-        }
+        width: 100%;
       }
     } // /.logo-block
   } // /__blocks
