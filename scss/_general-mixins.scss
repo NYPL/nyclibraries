@@ -31,6 +31,7 @@
 }
 
 @mixin button(
+  $margin-left: 0,
   $text-size: null,
   $width: null
   ) {
@@ -42,6 +43,7 @@
   font-size: $text-size;
   font-weight: 700;
   height: 1.25rem;
+  margin: 0 0 0 $margin-left;
   padding: 0.75rem 1rem 1.15rem;
   text-align: center;
   text-decoration: none;
