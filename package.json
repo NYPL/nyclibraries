@@ -1,8 +1,8 @@
 {
-  "name": "2017 Library Amnesty",
+  "name": "2017-Library-Amnesty",
   "version": "0.0.1",
-  "author": "NYPL Digital",
   "description": "Microsite for the  2017 library fine amnesty program, you know, for kids!",
+  "author": "NYPL Digital",
   "contributors": [
     {
       "name": "Ricardo E. Galvez",
