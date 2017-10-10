@@ -120,21 +120,83 @@ h4 {
       @include media($mediumscreen-breakpoint) {
         width: 100%;
       }
+
       .svg-container {
 
         @include media($largescreen-breakpoint) {
-          height: 10rem;
+          height: 7rem;
         }
-        @include media($tabletscreen-breakpoint) {
 
-        }
+        @include media($tabletscreen-breakpoint) {}
+
         @include media($mediumscreen-breakpoint) {
           height: 9rem;
         }
+
         @include media($xtrasmallscreen-breakpoint) {
 
         }
-      }
+      } // /svg-container
+      //
+      // Brooklyn logo
+      //
+      &.brooklyn-logo {
+        .svg-container {
+          @include media($mediumscreen-breakpoint) {
+            height: 5.5rem;
+          }
+
+          @include media($xtrasmallscreen-breakpoint) {
+            height: 5.5rem;
+          }
+        }
+
+        svg {
+          height: 4rem;
+        }
+
+        span {
+          //height: 1rem;
+
+          @include media($tabletscreen-breakpoint) {
+
+          }
+        }
+      } // /brooklyn-logo
+
+      //
+      // nypl logo
+      //
+      &.nypl-logo {
+
+        .svg-container {}
+
+        svg {
+          height: 6rem;
+        }
+      } // /.nypl-logo
+
+
+      //
+      // Queens logo
+      //
+      &.queens-logo {
+        .svg-container {
+
+          @include media($largescreen-breakpoint) {
+            //height: 10rem;
+          }
+
+          @include media($mediumscreen-breakpoint) {
+            height: 5.5rem;
+          }
+
+          @include media($xtrasmallscreen-breakpoint) {
+            height: 4.5rem;
+          }
+        }
+      } // Queens logo
+
       svg {
         //border: 1px solid $nypl-light-blue;
         margin: ($general-margin / 1.5);
@@ -151,7 +213,9 @@ h4 {
 
       span {
         display: block;
-        margin-bottom: $general-margin;
+        line-height: 1.2;
+        height: 3rem;
+        margin: $general-margin 0;
         width: 100%;
       }
 
@@ -168,7 +232,7 @@ h4 {
         }
 
         @include media($mediumscreen-breakpoint) {
-          //width: 30%;
+
         }
 
         @include media($xtrasmallscreen-breakpoint) {
@@ -182,14 +246,6 @@ h4 {
 
         @include media($mediumscreen-breakpoint) {
           //width: 50%;
-        }
-      }
-
-      .queens-icon {
-
-        @include media($mediumscreen-breakpoint) {
-          // height: 4.25rem;
-          // width: 14.8125rem;
         }
       }
     } // /.logo-block
