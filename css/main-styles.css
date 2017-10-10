@@ -645,6 +645,12 @@ h4 {
     margin-bottom: 1rem;
     text-shadow: 1px 1px 4px rgba(60, 60, 60, 0.5);
     text-transform: uppercase; }
+    @media (max-width: 483px) {
+      .hero span {
+        font-size: 1.25rem; } }
+    @media (max-width: 320px) {
+      .hero span {
+        font-size: 1rem; } }
   .hero .header-image {
     text-align: center;
     width: 100%; }
@@ -670,7 +676,7 @@ h4 {
 
 .full-width-wrapper {
   max-width: calc(64rem - (2rem));
-  padding: 0 1rem;
+  padding: 0 17rem;
   position: relative;
   margin: 0 auto; }
   .full-width-wrapper::before, .full-width-wrapper::after {
@@ -686,7 +692,9 @@ h4 {
       padding: 0 4.5rem; } }
   @media (max-width: 483px) {
     .full-width-wrapper {
-      margin: 0;
+      padding: 0 1.5rem; } }
+  @media (max-width: 320px) {
+    .full-width-wrapper {
       padding: 0 0.5rem; } }
 
 .row {

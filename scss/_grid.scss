@@ -7,7 +7,7 @@
 
 @mixin full-width-wrapper {
   max-width: calc(#{$mid-width} - (#{$general-padding * 2}));
-  padding: 0 $general-padding;
+  padding: 0 ($general-padding * 17);
   position: relative;
   margin: 0 auto;
   @include clearfix;
@@ -21,9 +21,12 @@
   }
 
   @include media($mediumscreen-breakpoint) {
-    margin: 0;
-    padding: 0 #{$general-padding * 0.5};
-  } // /media
+    padding: 0 ($general-padding * 1.5);
+  }
+
+  @include media($xtrasmallscreen-breakpoint) {
+    padding: 0 ($general-padding / 2);
+  }
 } // /full-width-wrapper
 
 @mixin row {
@@ -34,7 +37,6 @@
   @include media($mediumscreen-breakpoint) {
     margin: 0 $general-padding / 2;
   }
-
 }
 
 @mixin column-type(
