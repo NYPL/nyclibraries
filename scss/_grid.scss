@@ -13,7 +13,7 @@
   @include clearfix;
 
   @include media($largescreen-breakpoint) {
-    padding: 0 ($general-padding * 10.5);
+    padding: 0 ($general-padding * 19.5);
   }
 
   @include media($tabletscreen-breakpoint) {

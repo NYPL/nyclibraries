@@ -110,7 +110,7 @@ h4 {
 .library-logos {
 
   &__blocks {
-    //border: 1px dotted $nypl-red;
+    // border: 1px dotted $nypl-red;
 
     &.logo-block {
       display: block;
@@ -141,22 +141,23 @@ h4 {
       } // /svg-container
 
       svg {
-        margin: ($general-margin / 1.5);
+        //margin: ($general-margin / 1.5);
 
         @include media($mediumscreen-breakpoint) {
-          margin: $general-margin;
+          // margin: $general-margin;
           width: 50%;
         }
 
         @include media($xtrasmallscreen-breakpoint) {
           width: 70%;
         }
-      }
+      } // svg
 
       //
       // Brooklyn logo
       //
       &.brooklyn-logo {
+
         .svg-container {
           @include media($mediumscreen-breakpoint) {
             height: 5.5rem;
@@ -189,6 +190,12 @@ h4 {
         svg {
           height: 6rem;
         }
+        span {
+          @include media($mediumscreen-breakpoint) {
+            height: 3rem;
+            margin-bottom: $general-margin;
+          }
+        }
       } // /.nypl-logo
 
 
@@ -197,7 +204,6 @@ h4 {
       //
       &.queens-logo {
         .svg-container {
-
           @include media($largescreen-breakpoint) {
             //height: 10rem;
           }
@@ -209,16 +215,15 @@ h4 {
           @include media($xtrasmallscreen-breakpoint) {
             height: 4.5rem;
           }
-        }
+        } // /.svg-container
 
         svg {
-
-          @include media(mediumscreen-breakpoint) {
-            width: 100%;
+          @include media($mediumscreen-breakpoint) {
+            width: 65%;
           }
 
           @include media($xtrasmallscreen-breakpoint) {
-            width: 50%;
+            width: 80%;
           }
         }
       } // Queens logo
@@ -229,6 +234,11 @@ h4 {
         height: 4rem;
         margin: $general-margin 0;
         width: 100%;
+
+        @include media($mediumscreen-breakpoint) {
+          height: 2.5rem;
+          margin-bottom: 0;
+        }
       }
 
       a {
@@ -241,14 +251,6 @@ h4 {
           font-size: 80%;
           height: auto;
           padding: 0.5rem 0;
-        }
-
-        @include media($mediumscreen-breakpoint) {
-
-        }
-
-        @include media($xtrasmallscreen-breakpoint) {
-
         }
       } // /a
 

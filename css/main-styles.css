@@ -686,7 +686,7 @@ h4 {
     clear: both; }
   @media (max-width: 1440px) {
     .full-width-wrapper {
-      padding: 0 10.5rem; } }
+      padding: 0 19.5rem; } }
   @media (max-width: 1040px) {
     .full-width-wrapper {
       padding: 0 4.5rem; } }
@@ -806,15 +806,12 @@ h4 {
   @media (max-width: 1040px) {
     .library-logos__blocks.logo-block .svg-container {
       height: 7rem; } }
-  .library-logos__blocks.logo-block svg {
-    margin: 0.66667rem; }
-    @media (max-width: 483px) {
-      .library-logos__blocks.logo-block svg {
-        margin: 1rem;
-        width: 50%; } }
-    @media (max-width: 320px) {
-      .library-logos__blocks.logo-block svg {
-        width: 70%; } }
+  @media (max-width: 483px) {
+    .library-logos__blocks.logo-block svg {
+      width: 50%; } }
+  @media (max-width: 320px) {
+    .library-logos__blocks.logo-block svg {
+      width: 70%; } }
   @media (max-width: 483px) {
     .library-logos__blocks.logo-block.brooklyn-logo .svg-container {
       height: 5.5rem; } }
@@ -829,23 +826,31 @@ h4 {
   .library-logos__blocks.logo-block.nypl-logo svg {
     height: 6rem; }
   @media (max-width: 483px) {
+    .library-logos__blocks.logo-block.nypl-logo span {
+      height: 3rem;
+      margin-bottom: 1rem; } }
+  @media (max-width: 483px) {
     .library-logos__blocks.logo-block.queens-logo .svg-container {
       height: 5.5rem; } }
   @media (max-width: 320px) {
     .library-logos__blocks.logo-block.queens-logo .svg-container {
       height: 4.5rem; } }
-  @media (max-width: mediumscreen-breakpoint) {
+  @media (max-width: 483px) {
     .library-logos__blocks.logo-block.queens-logo svg {
-      width: 100%; } }
+      width: 65%; } }
   @media (max-width: 320px) {
     .library-logos__blocks.logo-block.queens-logo svg {
-      width: 50%; } }
+      width: 80%; } }
   .library-logos__blocks.logo-block span {
     display: block;
     line-height: 1.2;
     height: 4rem;
     margin: 1rem 0;
     width: 100%; }
+    @media (max-width: 483px) {
+      .library-logos__blocks.logo-block span {
+        height: 2.5rem;
+        margin-bottom: 0; } }
   .library-logos__blocks.logo-block a {
     font-size: 1rem;
     margin: auto;
