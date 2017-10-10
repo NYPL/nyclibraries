@@ -800,10 +800,29 @@ h4 {
   @media (max-width: 483px) {
     .library-logos__blocks.logo-block {
       width: 100%; } }
+  @media (max-width: 1120px) {
+    .library-logos__blocks.logo-block .svg-container {
+      height: 10rem; } }
+  @media (max-width: 483px) {
+    .library-logos__blocks.logo-block .svg-container {
+      height: 9rem; } }
+  .library-logos__blocks.logo-block svg {
+    margin: 0.66667rem; }
+    @media (max-width: 483px) {
+      .library-logos__blocks.logo-block svg {
+        margin: 1rem;
+        width: 50%; } }
+    @media (max-width: 320px) {
+      .library-logos__blocks.logo-block svg {
+        width: 70%; } }
   .library-logos__blocks.logo-block span {
     display: block;
+    margin-bottom: 1rem;
     width: 100%; }
   .library-logos__blocks.logo-block a {
+    font-size: 1rem;
+    margin: auto;
+    width: 6.85rem;
     background-color: #fff;
     border: 0.125rem solid #07818d;
     border-radius: 0.85rem;
@@ -811,60 +830,21 @@ h4 {
     display: block;
     font-weight: 700;
     height: 1.25rem;
-    margin: 0 0 0 20%;
-    padding: 0.75rem 1rem 1.15rem;
+    padding: 0.75rem 1rem 1rem;
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
-    width: 40%; }
+    text-transform: uppercase; }
     .library-logos__blocks.logo-block a:hover {
       background-color: #07818d;
       border-color: #fff;
       color: #fff; }
     @media (max-width: 965px) {
       .library-logos__blocks.logo-block a {
-        background-color: #fff;
-        border: 0.125rem solid #07818d;
-        border-radius: 0.85rem;
-        color: #047074;
-        display: block;
-        font-size: 90%;
-        font-weight: 700;
-        height: 1.25rem;
-        margin: 0 0 0 0;
-        padding: 0.75rem 1rem 1.15rem;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-        width: 75%; }
-        .library-logos__blocks.logo-block a:hover {
-          background-color: #07818d;
-          border-color: #fff;
-          color: #fff; } }
-    @media (max-width: 483px) {
-      .library-logos__blocks.logo-block a {
-        background-color: #fff;
-        border: 0.125rem solid #07818d;
-        border-radius: 0.85rem;
-        color: #047074;
-        display: block;
-        font-weight: 700;
-        height: 1.25rem;
-        margin: 0 0 0 0;
-        padding: 0.75rem 1rem 1.15rem;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-        width: 90%; }
-        .library-logos__blocks.logo-block a:hover {
-          background-color: #07818d;
-          border-color: #fff;
-          color: #fff; } }
+        font-size: 80%;
+        height: auto;
+        padding: 0.5rem 0; } }
   .library-logos__blocks.logo-block .svg-icon {
     fill: #080807; }
-    @media (max-width: 483px) {
-      .library-logos__blocks.logo-block .svg-icon {
-        width: 50%; } }
 
 footer {
   background: #00a1af;

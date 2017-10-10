@@ -110,6 +110,7 @@ h4 {
 .library-logos {
 
   &__blocks {
+    //border: 1px dotted $nypl-red;
 
     &.logo-block {
       display: block;
@@ -119,28 +120,59 @@ h4 {
       @include media($mediumscreen-breakpoint) {
         width: 100%;
       }
+      .svg-container {
+
+        @include media($largescreen-breakpoint) {
+          height: 10rem;
+        }
+        @include media($tabletscreen-breakpoint) {
+
+        }
+        @include media($mediumscreen-breakpoint) {
+          height: 9rem;
+        }
+        @include media($xtrasmallscreen-breakpoint) {
+
+        }
+      }
+      svg {
+        //border: 1px solid $nypl-light-blue;
+        margin: ($general-margin / 1.5);
+
+        @include media($mediumscreen-breakpoint) {
+          margin: $general-margin;
+          width: 50%;
+        }
+
+        @include media($xtrasmallscreen-breakpoint) {
+          width: 70%;
+        }
+      }
 
       span {
         display: block;
+        margin-bottom: $general-margin;
         width: 100%;
       }
 
       a {
-
-        @include button(
-        $margin-left: 20%,
-        $width: 40%
-        );
+        font-size: 1rem;
+        margin: auto;
+        width: 6.85rem;
+        @include button;
 
         @include media($tabletscreen-breakpoint) {
-          @include button(
-          $text-size: 90%,
-          $width: 75%);
+          font-size: 80%;
+          height: auto;
+          padding: 0.5rem 0;
         }
 
         @include media($mediumscreen-breakpoint) {
-          @include button(
-          $width: 90%);
+          //width: 30%;
+        }
+
+        @include media($xtrasmallscreen-breakpoint) {
+
         }
       } // /a
 
@@ -149,7 +181,7 @@ h4 {
         fill: $nypl-dark-gray;
 
         @include media($mediumscreen-breakpoint) {
-          width: 50%;
+          //width: 50%;
         }
       }
 
@@ -160,8 +192,8 @@ h4 {
           // width: 14.8125rem;
         }
       }
-    }
-  }
+    } // /.logo-block
+  } // /__blocks
 } // /.library-logos
 
 footer {
