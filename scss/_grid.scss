@@ -6,11 +6,15 @@
 @import "media-queries";
 
 @mixin full-width-wrapper {
-  max-width: calc(#{$max-width} - (#{$general-padding * 2}));
+  max-width: calc(#{$mid-width} - (#{$general-padding * 2}));
   padding: 0 $general-padding;
   position: relative;
   margin: 0 auto;
   @include clearfix;
+
+  @include media($largescreen-breakpoint) {
+    padding: 0 ($general-padding * 4);
+  }
 
   @include media($mediumscreen-breakpoint) {
     margin: 0;

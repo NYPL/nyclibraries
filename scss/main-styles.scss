@@ -62,8 +62,16 @@ h4 {
   @include column-full;
 }
 
+.column-half {
+  @include column-half;
+}
+
 .column-one-third {
   @include column-one-third;
+}
+
+.column-two-thirds {
+  @include column-two-thirds;
 }
 
 .library-logos {
