@@ -17,7 +17,12 @@ body {
 h2,
 h3,
 h4 {
-  color: $nypl-teal;
+  color: $nypl-teal-dark;
+
+  &.chinese-text {
+    font-size: 1.5rem;
+    font-weight: 200;
+  }
 }
 
 .hero {
@@ -56,6 +61,7 @@ h4 {
 
       @include media($tabletscreen-breakpoint) {
         height: 9rem;
+        width: 100%;
       }
 
       @include media($xtrasmallscreen-breakpoint) {

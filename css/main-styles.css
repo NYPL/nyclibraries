@@ -627,7 +627,12 @@ body {
 h2,
 h3,
 h4 {
-  color: #07818d; }
+  color: #047074; }
+  h2.chinese-text,
+  h3.chinese-text,
+  h4.chinese-text {
+    font-size: 1.5rem;
+    font-weight: 200; }
 
 .hero {
   background: #d0343a;
@@ -657,7 +662,8 @@ h4 {
       height: 11rem; }
       @media (max-width: 965px) {
         .hero .header-image img {
-          height: 9rem; } }
+          height: 9rem;
+          width: 100%; } }
       @media (max-width: 320px) {
         .hero .header-image img {
           height: 6rem; } }
