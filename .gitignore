@@ -8,3 +8,6 @@
 
 # Ignore the /doc directory
 doc
+
+
+node_modules

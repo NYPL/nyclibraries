@@ -1,9 +1,144 @@
 @import "normalize";
 @import "base";
-@import "measurements";
+@import "colors";
 @import "typography";
-@import "media-queries";
+@import "general-mixins";
+@import "grid";
 
 body {
   @include font-settings;
+}
+
+.screenreader-only {
+  @include screenreader-only;
+}
+
+// basic settings for the headings
+h2,
+h3,
+h4 {
+  color: $nypl-teal;
+}
+
+.hero {
+  background: $nypl-red;
+  color: $nypl-white;
+  padding: ($general-padding * 2.5) 0;
+  text-align: center;
+
+  span {
+    font-size: $small-type;
+    text-transform: uppercase;
+  }
+
+  .header-image {
+    text-align: center;
+    width: 100%;
+
+    @include media($xtrasmallscreen-breakpoint) {
+      height: 6rem;
+      margin-left: 1%;
+    }
+
+    img {
+      height: 6rem;
+    }
+  }
+} // /.hero
+
+//
+// grid & layout
+//
+
+.full-width-wrapper {
+  @include full-width-wrapper;
+}
+
+.row {
+  @include row;
+}
+
+.column-full {
+  @include column-full;
+}
+
+.column-one-third {
+  @include column-one-third;
+}
+
+.library-logos {
+
+  &__blocks {
+
+    &.logo-block {
+      display: block;
+      text-align: center;
+      width: 33%;
+
+      @include media($mediumscreen-breakpoint) {
+        width: 100%;
+      }
+
+      span {
+        display: block;
+        width: 100%;
+      }
+
+      a {
+
+        @include button(
+        $margin-left: 20%,
+        $width: 40%
+        );
+
+        @include media($tabletscreen-breakpoint) {
+          @include button(
+          $text-size: 90%,
+          $width: 75%);
+        }
+
+        @include media($mediumscreen-breakpoint) {
+          @include button(
+          $width: 90%);
+        }
+      } // /a
+
+      .svg-icon {
+        // height: 5rem;
+        fill: $nypl-dark-gray;
+
+        @include media($mediumscreen-breakpoint) {
+          width: 50%;
+        }
+      }
+
+      .queens-icon {
+
+        @include media($mediumscreen-breakpoint) {
+          // height: 4.25rem;
+          // width: 14.8125rem;
+        }
+      }
+    }
+  }
+} // /.library-logos
+
+footer {
+  background: $am-teal;
+  margin-top: 10rem;
+
+  @include media($mediumscreen-breakpoint) {
+    margin-top: 8rem;
+  }
+
+  .graphic-container {
+    height: 15rem;
+
+    img {
+      float: right;
+      position: relative;
+      right: 1rem;
+      top: -7.2rem;
+    }
+  }
 }

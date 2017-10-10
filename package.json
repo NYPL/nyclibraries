@@ -1,0 +1,21 @@
+{
+  "name": "2017 Library Amnesty",
+  "version": "0.0.1",
+  "author": "NYPL Digital",
+  "description": "Microsite for the  2017 library fine amnesty program, you know, for kids!",
+  "contributors": [
+    {
+      "name": "Ricardo E. Galvez",
+      "email": "ricardogalvez@nypl.org"
+    }
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NYPL/newstart-2017.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
