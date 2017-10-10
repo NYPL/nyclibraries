@@ -124,10 +124,12 @@ h4 {
       .svg-container {
 
         @include media($largescreen-breakpoint) {
-          height: 7rem;
+          height: 8rem;
         }
 
-        @include media($tabletscreen-breakpoint) {}
+        @include media($tabletscreen-breakpoint) {
+          height: 7rem;
+        }
 
         @include media($mediumscreen-breakpoint) {
           //height: 9rem;
