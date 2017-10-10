@@ -23,11 +23,14 @@ h4 {
 .hero {
   background: $nypl-red;
   color: $nypl-white;
-  padding: ($general-padding * 2.5) 0;
+  padding: ($general-padding * 2) 0 ($general-padding * 2.5);
   text-align: center;
 
   span {
-    font-size: $small-type;
+    display: block;
+    font-size: 1.65rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 4px rgba(60, 60, 60, 0.5);
     text-transform: uppercase;
   }
 
@@ -35,13 +38,29 @@ h4 {
     text-align: center;
     width: 100%;
 
+    @include media($largescreen-breakpoint) {
+      height: 11rem;
+    }
+
+    @include media($tabletscreen-breakpoint) {
+      height: 9rem;
+    }
+
     @include media($xtrasmallscreen-breakpoint) {
       height: 6rem;
       margin-left: 1%;
     }
 
     img {
-      height: 6rem;
+      height: 11rem;
+
+      @include media($tabletscreen-breakpoint) {
+        height: 9rem;
+      }
+
+      @include media($xtrasmallscreen-breakpoint) {
+        height: 6rem;
+      }
     }
   }
 } // /.hero
