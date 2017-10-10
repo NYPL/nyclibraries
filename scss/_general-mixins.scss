@@ -30,16 +30,36 @@
   border: 0;
 }
 
-@mixin button {
-  border: 0.125rem solid $nypl-blue-dark;
-  border-radius: 0.5rem;
-  color: $nypl-blue-dark;
+@mixin button(
+  $text-size: null,
+  $width: null
+  ) {
+  background-color: $nypl-white;
+  border: 0.125rem solid $nypl-teal;
+  border-radius: 0.85rem;
+  color: $nypl-teal-dark;
   display: block;
+  font-size: $text-size;
   font-weight: 700;
   height: 1.25rem;
   padding: 0.75rem 1rem 1.15rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  width: 50%;
+  width: $width;
+  @content;
+
+  &:hover {
+    background-color: $nypl-teal;
+    border-color: $nypl-white;
+    color: $nypl-white;
+  }
+}
+
+@mixin box-sizing($type) {
+  // http://www.w3.org/TR/css3-ui/#box-sizing
+  // $type can be one of: content-box | padding-box | border-box | inherit
+  -webkit-box-sizing: $type; // Chrome 4.0 to 9.0, Safari 3.1 to 5.0,   Mobile Safari 3.2 to 4.3, Android Browser 2.1 to 3.0
+  -moz-box-sizing: $type; // Firefox 2.0 to 28.0, Firefox for Android 26.0 onwards
+  box-sizing: $type;
 }

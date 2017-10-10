@@ -643,17 +643,67 @@ body {
     display: table; }
   .row::after {
     clear: both; }
+  @media (max-width: 483px) {
+    .row {
+      margin: 0 0.5rem; } }
+
+.column-full {
+  border: 0;
+  float: none;
+  margin-bottom: 1rem;
+  min-height: 1rem;
+  padding: 0 0.5rem;
+  width: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .column-full::before, .column-full::after {
+    content: "";
+    display: table; }
+  .column-full::after {
+    clear: both; }
+  @media (max-width: 483px) {
+    .column-full {
+      float: none;
+      padding: 0;
+      width: auto; } }
+
+.column-one-third {
+  border: 0;
+  float: left;
+  margin-bottom: 1rem;
+  min-height: 1rem;
+  padding: 0 0.5rem;
+  width: 33.33333%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .column-one-third::before, .column-one-third::after {
+    content: "";
+    display: table; }
+  .column-one-third::after {
+    clear: both; }
+  @media (max-width: 483px) {
+    .column-one-third {
+      float: none;
+      padding: 0;
+      width: auto; } }
 
 .library-logos__blocks.logo-block {
   display: block;
+  text-align: center;
   width: 33%; }
+  @media (max-width: 483px) {
+    .library-logos__blocks.logo-block {
+      width: 100%; } }
   .library-logos__blocks.logo-block span {
     display: block;
     width: 100%; }
   .library-logos__blocks.logo-block a {
-    border: 0.125rem solid #135772;
-    border-radius: 0.5rem;
-    color: #135772;
+    background-color: #fff;
+    border: 0.125rem solid #07818d;
+    border-radius: 0.85rem;
+    color: #047074;
     display: block;
     font-weight: 700;
     height: 1.25rem;
@@ -661,19 +711,61 @@ body {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    width: 50%;
+    width: 40%;
     display: block; }
+    .library-logos__blocks.logo-block a:hover {
+      background-color: #07818d;
+      border-color: #fff;
+      color: #fff; }
+    @media (max-width: 965px) {
+      .library-logos__blocks.logo-block a {
+        background-color: #fff;
+        border: 0.125rem solid #07818d;
+        border-radius: 0.85rem;
+        color: #047074;
+        display: block;
+        font-weight: 700;
+        height: 1.25rem;
+        padding: 0.75rem 1rem 1.15rem;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 75%; }
+        .library-logos__blocks.logo-block a:hover {
+          background-color: #07818d;
+          border-color: #fff;
+          color: #fff; } }
+    @media (max-width: 483px) {
+      .library-logos__blocks.logo-block a {
+        background-color: #fff;
+        border: 0.125rem solid #07818d;
+        border-radius: 0.85rem;
+        color: #047074;
+        display: block;
+        font-weight: 700;
+        height: 1.25rem;
+        padding: 0.75rem 1rem 1.15rem;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 90%; }
+        .library-logos__blocks.logo-block a:hover {
+          background-color: #07818d;
+          border-color: #fff;
+          color: #fff; } }
   .library-logos__blocks.logo-block .svg-icon {
-    height: 5rem;
     fill: #080807; }
-  .library-logos__blocks.logo-block .queens-icon {
-    height: 4.25rem;
-    width: 14.8125rem; }
+    @media (max-width: 483px) {
+      .library-logos__blocks.logo-block .svg-icon {
+        width: 50%; } }
 
 footer {
-  margin-top: 5rem; }
+  background: #00a1af;
+  margin-top: 10rem; }
+  @media (max-width: 483px) {
+    footer {
+      margin-top: 8rem; } }
   footer .graphic-container {
-    background: #00a1af;
     height: 15rem; }
     footer .graphic-container img {
       float: right;

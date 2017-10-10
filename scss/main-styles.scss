@@ -36,13 +36,26 @@ body {
   @include row;
 }
 
+.column-full {
+  @include column-full;
+}
+
+.column-one-third {
+  @include column-one-third;
+}
+
 .library-logos {
 
   &__blocks {
 
     &.logo-block {
       display: block;
+      text-align: center;
       width: 33%;
+
+      @include media($mediumscreen-breakpoint) {
+        width: 100%;
+      }
 
       span {
         display: block;
@@ -50,28 +63,52 @@ body {
       }
 
       a {
-        @include button;
-        display: block;
-      }
+
+        @include button(
+        $width: 40%
+        );
+
+        @include media($tabletscreen-breakpoint) {
+          @include button(
+          $text-size: 90%,
+          $width: 75%);
+        }
+
+        @include media($mediumscreen-breakpoint) {
+          @include button(
+          $width: 90%);
+        }
+      } // /a
 
       .svg-icon {
-        height: 5rem;
+        // height: 5rem;
         fill: $nypl-dark-gray;
+
+        @include media($mediumscreen-breakpoint) {
+          width: 50%;
+        }
       }
 
       .queens-icon {
-        height: 4.25rem;
-        width: 14.8125rem;
+
+        @include media($mediumscreen-breakpoint) {
+          // height: 4.25rem;
+          // width: 14.8125rem;
+        }
       }
     }
   }
 } // /.library-logos
 
 footer {
-  margin-top: 5rem;
+  background: $am-teal;
+  margin-top: 10rem;
+
+  @include media($mediumscreen-breakpoint) {
+    margin-top: 8rem;
+  }
 
   .graphic-container {
-    background: $am-teal;
     height: 15rem;
 
     img {

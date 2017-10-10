@@ -22,6 +22,11 @@
   margin: 0 -0.5rem;
   min-height: 1rem;
   @include clearfix;
+
+  @include media($mediumscreen-breakpoint) {
+    margin: 0 $general-padding / 2;
+  }
+
 }
 
 @mixin column-type(
