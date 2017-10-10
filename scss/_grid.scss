@@ -6,11 +6,19 @@
 @import "media-queries";
 
 @mixin full-width-wrapper {
-  max-width: calc(#{$max-width} - (#{$general-padding * 2}));
+  max-width: calc(#{$mid-width} - (#{$general-padding * 2}));
   padding: 0 $general-padding;
   position: relative;
   margin: 0 auto;
   @include clearfix;
+
+  @include media($largescreen-breakpoint) {
+    padding: 0 ($general-padding * 7.5);
+  }
+
+  @include media($tabletscreen-breakpoint) {
+    padding: 0 ($general-padding * 4.5);
+  }
 
   @include media($mediumscreen-breakpoint) {
     margin: 0;
@@ -33,16 +41,21 @@
     $border: 0,
     $float: left,
     $margin-bottom: 1rem,
+    $padding-left-right: 0.5rem,
     $width: auto) {
-  //border: 1px solid $nypl-red;
   border: $border;
   float: $float;
   margin-bottom: $margin-bottom;
   min-height: 1rem;
-  padding: 0 0.5rem;
+  padding: 0 $padding-left-right;
   width: $width;
   @include clearfix;
+
   @include box-sizing(border-box);
+
+  // @include media($largescreen-breakpoint) {
+  //   padding: 0 9.5rem;
+  // }
 
   @include media($mediumscreen-breakpoint) {
     float: none;
