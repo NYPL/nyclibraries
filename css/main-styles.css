@@ -670,11 +670,11 @@ h4 {
       background-size: 40%, 50%; } }
   @media (max-width: 1040px) {
     .hero {
-      background-position: center center, top -2rem left 0;
+      background-position: center center, center center;
       background-size: 40%, 60%; } }
   @media (max-width: 483px) {
     .hero {
-      background-position: center center, top 0 left 0;
+      background-position: center center, center center;
       background-size: 65%, 100%; } }
   @media (max-width: 320px) {
     .hero {

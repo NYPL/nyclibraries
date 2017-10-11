@@ -79,12 +79,12 @@ h4 {
   }
 
   @include media($tabletscreen-breakpoint) {
-    background-position: center center, top -2rem left 0;
+    background-position: center center, center center;
     background-size: 40%, 60%;
   }
 
   @include media($mediumscreen-breakpoint) {
-    background-position: center center, top 0 left 0;
+    background-position: center center, center center;
     background-size: 65%, 100%;
   }
 
