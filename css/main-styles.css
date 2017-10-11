@@ -621,6 +621,30 @@ body {
   clip: rect(0, 0, 0, 0);
   border: 0; }
 
+#skip a {
+  background-color: #fff;
+  border: 0;
+  color: #047074;
+  display: block;
+  font-size: 1rem;
+  height: 1px;
+  left: -10000px;
+  line-height: 2;
+  overflow: hidden;
+  padding: 5px 10px 3px;
+  position: absolute;
+  top: 7px;
+  width: 1px;
+  z-index: 1000; }
+
+#skip a:focus {
+  border: 5px solid #1b7fa7;
+  height: auto;
+  left: 7px;
+  outline: 0;
+  overflow: visible;
+  width: auto; }
+
 h2,
 h3,
 h4 {
@@ -884,6 +908,8 @@ h4 {
       background-color: #07818d;
       border-color: #fff;
       color: #fff; }
+    .library-logos__blocks.logo-block a:focus {
+      border: 0.125rem solid #ffb81d; }
     @media (max-width: 1040px) {
       .library-logos__blocks.logo-block a {
         font-size: 80%;
