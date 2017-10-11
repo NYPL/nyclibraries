@@ -197,14 +197,6 @@ h4 {
         @include media($tabletscreen-breakpoint) {
           height: 6rem;
         }
-
-        // @include media($mediumscreen-breakpoint) {
-        //   //height: 9rem;
-        // }
-
-        // @include media($xtrasmallscreen-breakpoint) {
-        //
-        // }
       } // /svg-container
 
       svg {
@@ -256,6 +248,7 @@ h4 {
         svg {
           height: 6rem;
         }
+
         span {
           @include media($mediumscreen-breakpoint) {
             height: 3rem;
@@ -270,10 +263,6 @@ h4 {
       //
       &.queens-logo {
         .svg-container {
-          @include media($largescreen-breakpoint) {
-            //height: 10rem;
-          }
-
           @include media($mediumscreen-breakpoint) {
             height: 5.5rem;
           }
