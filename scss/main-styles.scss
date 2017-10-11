@@ -65,31 +65,31 @@ h4 {
 //
 .hero {
   background-color: $nypl-red;
-  background-image: url('../img/iconBG.png'), url('../img/iconsForward.png');
-  background-position: center center, top -1rem left 0;
-  background-repeat: repeat-x, repeat-x;
-  background-size: 35%, contain;
+  background-image: url('../img/iconsForward.png');
+  background-position: top -1rem left 0;
+  background-repeat: repeat-x;
+  background-size: contain;
   color: $nypl-white;
-  padding: ($general-padding * 2) 0 ($general-padding * 2.5);
+  padding: ($general-padding * 2) 0 0;
   text-align: center;
 
   @include media($largescreen-breakpoint) {
-    background-position: center center, top -5.25rem left 0;
-    background-size: 40%, 50%;
+    background-position: top -5.25rem left 0;
+    background-size: 50%;
   }
 
   @include media($tabletscreen-breakpoint) {
     background-position: center center, center center;
-    background-size: 40%, 60%;
+    background-size: 60%;
   }
 
   @include media($mediumscreen-breakpoint) {
     background-position: center center, center center;
-    background-size: 65%, 100%;
+    background-size: 100%;
   }
 
   @include media($xtrasmallscreen-breakpoint) {
-    background-size: 100%, 130%;
+    background-size: 130%;
   }
 
   span {
@@ -105,6 +105,11 @@ h4 {
 
     @include media($xtrasmallscreen-breakpoint) {
       font-size: 1rem;
+    }
+
+    &.spanish-subhead {
+      font-size: 1rem;
+      margin-top: $general-margin;
     }
   }
 
@@ -169,7 +174,17 @@ h4 {
   @include column-two-thirds;
 }
 
+.program-details {
+  &:nth-child(2) {
+    margin-top: ($general-margin * 3.5);
 
+    h2 {
+      @include media($xtrasmallscreen-breakpoint) {
+        line-height: 1.2;
+      }
+    }
+  }
+}
 
 //
 // Logo Blocks
@@ -263,12 +278,13 @@ h4 {
       //
       &.queens-logo {
         .svg-container {
+
           @include media($mediumscreen-breakpoint) {
-            height: 5.5rem;
+            height: 3.5rem;
           }
 
           @include media($xtrasmallscreen-breakpoint) {
-            height: 4.5rem;
+            height: 2.5rem;
           }
         } // /.svg-container
 
@@ -281,7 +297,7 @@ h4 {
             width: 80%;
           }
         }
-      } // Queens logo
+      } // /Queens logo
 
       span {
         display: block;
