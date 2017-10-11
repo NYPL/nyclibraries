@@ -66,7 +66,7 @@ h4 {
 .hero {
   background-color: $nypl-red;
   background-image: url('../img/iconBG.png'), url('../img/iconsForward.png');
-  background-position:  center center, top -1rem left 0;
+  background-position: center center, top -1rem left 0;
   background-repeat: repeat-x, repeat-x;
   background-size: 35%, contain;
   color: $nypl-white;
@@ -80,12 +80,12 @@ h4 {
 
   @include media($tabletscreen-breakpoint) {
     background-position: center center, top -2rem left 0;
-    background-size: 40%, 50%;
+    background-size: 40%, 60%;
   }
 
   @include media($mediumscreen-breakpoint) {
     background-position: center center, top 0 left 0;
-    background-size: 65%, cover;
+    background-size: 65%, 100%;
   }
 
   @include media($xtrasmallscreen-breakpoint) {
