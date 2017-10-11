@@ -26,10 +26,33 @@ h4 {
 }
 
 .hero {
-  background: $nypl-red;
+  background-color: $nypl-red;
+  background-image: url('../img/iconBG.png'), url('../img/iconsForward.png');
+  background-position:  center center, top -1rem left 0;
+  background-repeat: repeat-x, repeat-x;
+  background-size: 35%, contain;
   color: $nypl-white;
   padding: ($general-padding * 2) 0 ($general-padding * 2.5);
   text-align: center;
+
+  @include media($largescreen-breakpoint) {
+    background-position: center center, top -5.25rem left 0;
+    background-size: 40%, 50%;
+  }
+
+  @include media($tabletscreen-breakpoint) {
+    background-position: center center, top -2rem left 0;
+    background-size: 40%, 50%;
+  }
+
+  @include media($mediumscreen-breakpoint) {
+    background-position: center center, top 0 left 0;
+    background-size: 65%, cover;
+  }
+
+  @include media($xtrasmallscreen-breakpoint) {
+    background-size: 100%, 130%;
+  }
 
   span {
     display: block;

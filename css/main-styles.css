@@ -635,10 +635,29 @@ h4 {
     font-weight: 200; }
 
 .hero {
-  background: #d0343a;
+  background-color: #d0343a;
+  background-image: url("../img/iconBG.png"), url("../img/iconsForward.png");
+  background-position: center center, top -1rem left 0;
+  background-repeat: repeat-x, repeat-x;
+  background-size: 35%, contain;
   color: #fff;
   padding: 2rem 0 2.5rem;
   text-align: center; }
+  @media (max-width: 1440px) {
+    .hero {
+      background-position: center center, top -5.25rem left 0;
+      background-size: 40%, 50%; } }
+  @media (max-width: 1040px) {
+    .hero {
+      background-position: center center, top -2rem left 0;
+      background-size: 40%, 50%; } }
+  @media (max-width: 483px) {
+    .hero {
+      background-position: center center, top 0 left 0;
+      background-size: 65%, cover; } }
+  @media (max-width: 320px) {
+    .hero {
+      background-size: 100%, 130%; } }
   .hero span {
     display: block;
     font-size: 1.65rem;
