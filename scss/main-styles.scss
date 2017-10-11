@@ -5,15 +5,23 @@
 @import "general-mixins";
 @import "grid";
 
+
+//
+// basics
+//
 body {
   @include font-settings;
 }
 
+//
+// Screen readers
 .screenreader-only {
   @include screenreader-only;
 }
 
+//
 // basic settings for the headings
+//
 h2,
 h3,
 h4 {
@@ -25,6 +33,11 @@ h4 {
   }
 }
 
+
+
+//
+// Hero Space at the top of the page
+//
 .hero {
   background-color: $nypl-red;
   background-image: url('../img/iconBG.png'), url('../img/iconsForward.png');
@@ -102,10 +115,11 @@ h4 {
   }
 } // /.hero
 
+
+
 //
 // grid & layout
 //
-
 .full-width-wrapper {
   @include full-width-wrapper;
 }
@@ -130,6 +144,11 @@ h4 {
   @include column-two-thirds;
 }
 
+
+
+//
+// Logo Blocks
+//
 .library-logos {
 
   &__blocks {
@@ -151,23 +170,21 @@ h4 {
         }
 
         @include media($tabletscreen-breakpoint) {
-          height: 7rem;
+          height: 6rem;
         }
 
-        @include media($mediumscreen-breakpoint) {
-          //height: 9rem;
-        }
+        // @include media($mediumscreen-breakpoint) {
+        //   //height: 9rem;
+        // }
 
-        @include media($xtrasmallscreen-breakpoint) {
-
-        }
+        // @include media($xtrasmallscreen-breakpoint) {
+        //
+        // }
       } // /svg-container
 
       svg {
-        //margin: ($general-margin / 1.5);
 
         @include media($mediumscreen-breakpoint) {
-          // margin: $general-margin;
           width: 50%;
         }
 
@@ -176,6 +193,8 @@ h4 {
         }
       } // svg
 
+
+
       //
       // Brooklyn logo
       //
@@ -183,10 +202,6 @@ h4 {
 
         .svg-container {
           @include media($mediumscreen-breakpoint) {
-            height: 5.5rem;
-          }
-
-          @include media($xtrasmallscreen-breakpoint) {
             height: 5.5rem;
           }
         }
@@ -199,9 +214,12 @@ h4 {
 
           @include media($xtrasmallscreen-breakpoint) {
             height: 1.2rem;
+            margin-bottom: $general-margin;
           }
         }
       } // /brooklyn-logo
+
+
 
       //
       // nypl logo
@@ -254,7 +272,7 @@ h4 {
       span {
         display: block;
         line-height: 1.2;
-        height: 4rem;
+        height: 4.2rem;
         margin: $general-margin 0;
         width: 100%;
 
@@ -301,6 +319,14 @@ footer {
       position: relative;
       right: 1rem;
       top: -7.2rem;
+
+      @include media($mediumscreen-breakpoint) {
+        right: -4rem;
+      }
+
+      @include media($xtrasmallscreen-breakpoint) {
+        right: -1.5rem;
+      }
     }
   }
 }

@@ -550,9 +550,6 @@ textarea {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */ }
-
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
 
@@ -824,7 +821,7 @@ h4 {
       height: 8rem; } }
   @media (max-width: 1040px) {
     .library-logos__blocks.logo-block .svg-container {
-      height: 7rem; } }
+      height: 6rem; } }
   @media (max-width: 483px) {
     .library-logos__blocks.logo-block svg {
       width: 50%; } }
@@ -834,14 +831,12 @@ h4 {
   @media (max-width: 483px) {
     .library-logos__blocks.logo-block.brooklyn-logo .svg-container {
       height: 5.5rem; } }
-  @media (max-width: 320px) {
-    .library-logos__blocks.logo-block.brooklyn-logo .svg-container {
-      height: 5.5rem; } }
   .library-logos__blocks.logo-block.brooklyn-logo svg {
     height: 4rem; }
   @media (max-width: 320px) {
     .library-logos__blocks.logo-block.brooklyn-logo span {
-      height: 1.2rem; } }
+      height: 1.2rem;
+      margin-bottom: 1rem; } }
   .library-logos__blocks.logo-block.nypl-logo svg {
     height: 6rem; }
   @media (max-width: 483px) {
@@ -863,7 +858,7 @@ h4 {
   .library-logos__blocks.logo-block span {
     display: block;
     line-height: 1.2;
-    height: 4rem;
+    height: 4.2rem;
     margin: 1rem 0;
     width: 100%; }
     @media (max-width: 483px) {
@@ -911,3 +906,9 @@ footer {
       position: relative;
       right: 1rem;
       top: -7.2rem; }
+      @media (max-width: 483px) {
+        footer .graphic-container img {
+          right: -4rem; } }
+      @media (max-width: 320px) {
+        footer .graphic-container img {
+          right: -1.5rem; } }
