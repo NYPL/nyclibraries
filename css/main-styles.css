@@ -882,9 +882,14 @@ h4 {
   .library-logos__blocks.logo-block span {
     display: block;
     line-height: 1.2;
-    height: 4.2rem;
     margin: 1rem 0;
     width: 100%; }
+    @media (max-width: 1440px) {
+      .library-logos__blocks.logo-block span {
+        height: 4.2rem; } }
+    @media (max-width: 1040px) {
+      .library-logos__blocks.logo-block span {
+        height: 6.2rem; } }
     @media (max-width: 483px) {
       .library-logos__blocks.logo-block span {
         height: 2.5rem;
@@ -932,9 +937,6 @@ footer {
       position: relative;
       right: 1rem;
       top: -7.2rem; }
-      @media (max-width: 483px) {
-        footer .graphic-container img {
-          right: -4rem; } }
       @media (max-width: 320px) {
         footer .graphic-container img {
           right: -1.5rem; } }

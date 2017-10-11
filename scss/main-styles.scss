@@ -286,9 +286,16 @@ h4 {
       span {
         display: block;
         line-height: 1.2;
-        height: 4.2rem;
         margin: $general-margin 0;
         width: 100%;
+
+        @include media($largescreen-breakpoint) {
+          height: 4.2rem;
+        }
+
+        @include media($tabletscreen-breakpoint) {
+          height: 6.2rem;
+        }
 
         @include media($mediumscreen-breakpoint) {
           height: 2.5rem;
@@ -333,10 +340,6 @@ footer {
       position: relative;
       right: 1rem;
       top: -7.2rem;
-
-      @include media($mediumscreen-breakpoint) {
-        right: -4rem;
-      }
 
       @include media($xtrasmallscreen-breakpoint) {
         right: -1.5rem;
