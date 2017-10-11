@@ -550,10 +550,9 @@ textarea {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */ }
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
+
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
@@ -566,59 +565,376 @@ textarea {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster:
-       http://www.sanbeiji.com/archives/953 */
+                                   http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
     text-shadow: none !important; }
-
   a,
   a:visited {
     text-decoration: underline; }
-
   a[href]:after {
     content: " (" attr(href) ")"; }
-
   abbr[title]:after {
     content: " (" attr(title) ")"; }
-
   /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: ""; }
-
   pre {
     white-space: pre-wrap !important; }
-
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
-
   /*
-   * Printing Tables:
-   * http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
   thead {
     display: table-header-group; }
-
   tr,
   img {
     page-break-inside: avoid; }
-
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3; }
-
   h2,
   h3 {
     page-break-after: avoid; } }
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.65; }
 
-/*# sourceMappingURL=main-styles.css.map */
+.screenreader-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  margin: -0.1rem;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+#skip a {
+  background-color: #fff;
+  border: 0;
+  color: #047074;
+  display: block;
+  font-size: 1rem;
+  height: 1px;
+  left: -10000px;
+  line-height: 2;
+  overflow: hidden;
+  padding: 5px 10px 3px;
+  position: absolute;
+  top: 7px;
+  width: 1px;
+  z-index: 1000; }
+
+#skip a:focus {
+  border: 5px solid #1b7fa7;
+  height: auto;
+  left: 7px;
+  outline: 0;
+  overflow: visible;
+  width: auto; }
+
+h2,
+h3,
+h4 {
+  color: #047074; }
+  h2.chinese-text,
+  h3.chinese-text,
+  h4.chinese-text {
+    font-size: 1.5rem;
+    font-weight: 200; }
+
+.hero {
+  background-color: #d0343a;
+  background-image: url("../img/iconBG.png"), url("../img/iconsForward.png");
+  background-position: center center, top -1rem left 0;
+  background-repeat: repeat-x, repeat-x;
+  background-size: 35%, contain;
+  color: #fff;
+  padding: 2rem 0 2.5rem;
+  text-align: center; }
+  @media (max-width: 1440px) {
+    .hero {
+      background-position: center center, top -5.25rem left 0;
+      background-size: 40%, 50%; } }
+  @media (max-width: 1040px) {
+    .hero {
+      background-position: center center, center center;
+      background-size: 40%, 60%; } }
+  @media (max-width: 483px) {
+    .hero {
+      background-position: center center, center center;
+      background-size: 65%, 100%; } }
+  @media (max-width: 320px) {
+    .hero {
+      background-size: 100%, 130%; } }
+  .hero span {
+    display: block;
+    font-size: 1.65rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 4px rgba(60, 60, 60, 0.5);
+    text-transform: uppercase; }
+    @media (max-width: 483px) {
+      .hero span {
+        font-size: 1.25rem; } }
+    @media (max-width: 320px) {
+      .hero span {
+        font-size: 1rem; } }
+  .hero .header-image {
+    text-align: center;
+    width: 100%; }
+    @media (max-width: 1440px) {
+      .hero .header-image {
+        height: 11rem; } }
+    @media (max-width: 1040px) {
+      .hero .header-image {
+        height: 9rem; } }
+    @media (max-width: 320px) {
+      .hero .header-image {
+        height: 6rem;
+        margin-left: 1%; } }
+    .hero .header-image img {
+      height: 11rem; }
+      @media (max-width: 1040px) {
+        .hero .header-image img {
+          height: 9rem;
+          width: 100%; } }
+      @media (max-width: 320px) {
+        .hero .header-image img {
+          height: 6rem; } }
+
+.full-width-wrapper {
+  max-width: calc(82rem - (2rem));
+  padding: 0 17rem;
+  position: relative;
+  margin: 0 auto; }
+  .full-width-wrapper::before, .full-width-wrapper::after {
+    content: "";
+    display: table; }
+  .full-width-wrapper::after {
+    clear: both; }
+  @media (max-width: 1440px) {
+    .full-width-wrapper {
+      padding: 0 19.5rem; } }
+  @media (max-width: 1040px) {
+    .full-width-wrapper {
+      padding: 0 4.5rem; } }
+  @media (max-width: 483px) {
+    .full-width-wrapper {
+      padding: 0 1.5rem; } }
+  @media (max-width: 320px) {
+    .full-width-wrapper {
+      padding: 0 0.5rem; } }
+
+.row {
+  margin: 0 -0.5rem;
+  min-height: 1rem; }
+  .row::before, .row::after {
+    content: "";
+    display: table; }
+  .row::after {
+    clear: both; }
+  @media (max-width: 483px) {
+    .row {
+      margin: 0 0.5rem; } }
+
+.column-full {
+  border: 0;
+  float: none;
+  margin-bottom: 1rem;
+  min-height: 1rem;
+  padding: 0 0.5rem;
+  width: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .column-full::before, .column-full::after {
+    content: "";
+    display: table; }
+  .column-full::after {
+    clear: both; }
+  @media (max-width: 483px) {
+    .column-full {
+      float: none;
+      padding: 0;
+      width: auto; } }
+
+.column-half {
+  border: 0;
+  float: left;
+  margin-bottom: 1rem;
+  min-height: 1rem;
+  padding: 0 0.5rem;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .column-half::before, .column-half::after {
+    content: "";
+    display: table; }
+  .column-half::after {
+    clear: both; }
+  @media (max-width: 483px) {
+    .column-half {
+      float: none;
+      padding: 0;
+      width: auto; } }
+
+.column-one-third {
+  border: 0;
+  float: left;
+  margin-bottom: 1rem;
+  min-height: 1rem;
+  padding: 0 0.5rem;
+  width: 33.33333%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .column-one-third::before, .column-one-third::after {
+    content: "";
+    display: table; }
+  .column-one-third::after {
+    clear: both; }
+  @media (max-width: 483px) {
+    .column-one-third {
+      float: none;
+      padding: 0;
+      width: auto; } }
+
+.column-two-thirds {
+  border: 0;
+  float: left;
+  margin-bottom: 1rem;
+  min-height: 1rem;
+  padding: 0 0.5rem;
+  width: 66.66667%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .column-two-thirds::before, .column-two-thirds::after {
+    content: "";
+    display: table; }
+  .column-two-thirds::after {
+    clear: both; }
+  @media (max-width: 483px) {
+    .column-two-thirds {
+      float: none;
+      padding: 0;
+      width: auto; } }
+
+.library-logos__blocks.logo-block {
+  display: block;
+  text-align: center;
+  width: 33%; }
+  @media (max-width: 483px) {
+    .library-logos__blocks.logo-block {
+      width: 100%; } }
+  @media (max-width: 1440px) {
+    .library-logos__blocks.logo-block .svg-container {
+      height: 8rem; } }
+  @media (max-width: 1040px) {
+    .library-logos__blocks.logo-block .svg-container {
+      height: 6rem; } }
+  @media (max-width: 483px) {
+    .library-logos__blocks.logo-block svg {
+      width: 50%; } }
+  @media (max-width: 320px) {
+    .library-logos__blocks.logo-block svg {
+      width: 70%; } }
+  @media (max-width: 483px) {
+    .library-logos__blocks.logo-block.brooklyn-logo .svg-container {
+      height: 5.5rem; } }
+  .library-logos__blocks.logo-block.brooklyn-logo svg {
+    height: 4rem; }
+  @media (max-width: 320px) {
+    .library-logos__blocks.logo-block.brooklyn-logo span {
+      height: 1.2rem;
+      margin-bottom: 1rem; } }
+  .library-logos__blocks.logo-block.nypl-logo svg {
+    height: 6rem; }
+  @media (max-width: 483px) {
+    .library-logos__blocks.logo-block.nypl-logo span {
+      height: 3rem;
+      margin-bottom: 1rem; } }
+  @media (max-width: 483px) {
+    .library-logos__blocks.logo-block.queens-logo .svg-container {
+      height: 5.5rem; } }
+  @media (max-width: 320px) {
+    .library-logos__blocks.logo-block.queens-logo .svg-container {
+      height: 4.5rem; } }
+  @media (max-width: 483px) {
+    .library-logos__blocks.logo-block.queens-logo svg {
+      width: 65%; } }
+  @media (max-width: 320px) {
+    .library-logos__blocks.logo-block.queens-logo svg {
+      width: 80%; } }
+  .library-logos__blocks.logo-block span {
+    display: block;
+    line-height: 1.2;
+    height: 4.2rem;
+    margin: 1rem 0;
+    width: 100%; }
+    @media (max-width: 483px) {
+      .library-logos__blocks.logo-block span {
+        height: 2.5rem;
+        margin-bottom: 0; } }
+  .library-logos__blocks.logo-block a {
+    font-size: 1rem;
+    margin: auto;
+    width: 6.85rem;
+    background-color: #fff;
+    border: 0.125rem solid #07818d;
+    border-radius: 0.85rem;
+    color: #047074;
+    display: block;
+    font-weight: 700;
+    height: 1.25rem;
+    padding: 0.75rem 1rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .library-logos__blocks.logo-block a:hover {
+      background-color: #07818d;
+      border-color: #fff;
+      color: #fff; }
+    .library-logos__blocks.logo-block a:focus {
+      border: 0.125rem solid #ffb81d; }
+    @media (max-width: 1040px) {
+      .library-logos__blocks.logo-block a {
+        font-size: 80%;
+        height: auto;
+        padding: 0.5rem 0; } }
+  .library-logos__blocks.logo-block .svg-icon {
+    fill: #080807;
+    width: 100%; }
+
+footer {
+  background: #00a1af;
+  margin-top: 10rem; }
+  @media (max-width: 483px) {
+    footer {
+      margin-top: 8rem; } }
+  footer .graphic-container {
+    height: 15rem; }
+    footer .graphic-container img {
+      float: right;
+      position: relative;
+      right: 1rem;
+      top: -7.2rem; }
+      @media (max-width: 483px) {
+        footer .graphic-container img {
+          right: -4rem; } }
+      @media (max-width: 320px) {
+        footer .graphic-container img {
+          right: -1.5rem; } }

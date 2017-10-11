@@ -1,9 +1,346 @@
 @import "normalize";
 @import "base";
-@import "measurements";
+@import "colors";
 @import "typography";
-@import "media-queries";
+@import "general-mixins";
+@import "grid";
 
+
+//
+// basics
+//
 body {
   @include font-settings;
+}
+
+//
+// Screen readers
+.screenreader-only {
+  @include screenreader-only;
+}
+
+#skip a {
+  background-color: $nypl-white;
+  border: 0;
+  color: $nypl-teal-dark;
+  display: block;
+  font-size: 1rem;;
+  height: 1px;
+  left: -10000px;
+  line-height: 2;
+  overflow: hidden;
+  padding: 5px 10px 3px;
+  position: absolute;
+  top: 7px;
+  width: 1px;
+  z-index: 1000;
+}
+
+#skip a:focus {
+    border: 5px solid $nypl-blue;
+    height: auto;
+    left: 7px;
+    outline: 0;
+    overflow: visible;
+    width: auto;
+  }
+//
+// basic settings for the headings
+//
+h2,
+h3,
+h4 {
+  color: $nypl-teal-dark;
+
+  &.chinese-text {
+    font-size: 1.5rem;
+    font-weight: 200;
+  }
+}
+
+
+
+//
+// Hero Space at the top of the page
+//
+.hero {
+  background-color: $nypl-red;
+  background-image: url('../img/iconBG.png'), url('../img/iconsForward.png');
+  background-position: center center, top -1rem left 0;
+  background-repeat: repeat-x, repeat-x;
+  background-size: 35%, contain;
+  color: $nypl-white;
+  padding: ($general-padding * 2) 0 ($general-padding * 2.5);
+  text-align: center;
+
+  @include media($largescreen-breakpoint) {
+    background-position: center center, top -5.25rem left 0;
+    background-size: 40%, 50%;
+  }
+
+  @include media($tabletscreen-breakpoint) {
+    background-position: center center, center center;
+    background-size: 40%, 60%;
+  }
+
+  @include media($mediumscreen-breakpoint) {
+    background-position: center center, center center;
+    background-size: 65%, 100%;
+  }
+
+  @include media($xtrasmallscreen-breakpoint) {
+    background-size: 100%, 130%;
+  }
+
+  span {
+    display: block;
+    font-size: 1.65rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 4px rgba(60, 60, 60, 0.5);
+    text-transform: uppercase;
+
+    @include media($mediumscreen-breakpoint) {
+      font-size: 1.25rem;
+    }
+
+    @include media($xtrasmallscreen-breakpoint) {
+      font-size: 1rem;
+    }
+  }
+
+  .header-image {
+    text-align: center;
+    width: 100%;
+
+    @include media($largescreen-breakpoint) {
+      height: 11rem;
+    }
+
+    @include media($tabletscreen-breakpoint) {
+      height: 9rem;
+    }
+
+    @include media($xtrasmallscreen-breakpoint) {
+      height: 6rem;
+      margin-left: 1%;
+    }
+
+    img {
+      height: 11rem;
+
+      @include media($tabletscreen-breakpoint) {
+        height: 9rem;
+        width: 100%;
+      }
+
+      @include media($xtrasmallscreen-breakpoint) {
+        height: 6rem;
+      }
+    }
+  }
+} // /.hero
+
+
+
+//
+// grid & layout
+//
+.full-width-wrapper {
+  @include full-width-wrapper;
+}
+
+.row {
+  @include row;
+}
+
+.column-full {
+  @include column-full;
+}
+
+.column-half {
+  @include column-half;
+}
+
+.column-one-third {
+  @include column-one-third;
+}
+
+.column-two-thirds {
+  @include column-two-thirds;
+}
+
+
+
+//
+// Logo Blocks
+//
+.library-logos {
+
+  &__blocks {
+    // border: 1px dotted $nypl-red;
+
+    &.logo-block {
+      display: block;
+      text-align: center;
+      width: 33%;
+
+      @include media($mediumscreen-breakpoint) {
+        width: 100%;
+      }
+
+      .svg-container {
+
+        @include media($largescreen-breakpoint) {
+          height: 8rem;
+        }
+
+        @include media($tabletscreen-breakpoint) {
+          height: 6rem;
+        }
+      } // /svg-container
+
+      svg {
+
+        @include media($mediumscreen-breakpoint) {
+          width: 50%;
+        }
+
+        @include media($xtrasmallscreen-breakpoint) {
+          width: 70%;
+        }
+      } // svg
+
+
+
+      //
+      // Brooklyn logo
+      //
+      &.brooklyn-logo {
+
+        .svg-container {
+          @include media($mediumscreen-breakpoint) {
+            height: 5.5rem;
+          }
+        }
+
+        svg {
+          height: 4rem;
+        }
+
+        span {
+
+          @include media($xtrasmallscreen-breakpoint) {
+            height: 1.2rem;
+            margin-bottom: $general-margin;
+          }
+        }
+      } // /brooklyn-logo
+
+
+
+      //
+      // nypl logo
+      //
+      &.nypl-logo {
+
+        .svg-container {}
+
+        svg {
+          height: 6rem;
+        }
+
+        span {
+          @include media($mediumscreen-breakpoint) {
+            height: 3rem;
+            margin-bottom: $general-margin;
+          }
+        }
+      } // /.nypl-logo
+
+
+      //
+      // Queens logo
+      //
+      &.queens-logo {
+        .svg-container {
+          @include media($mediumscreen-breakpoint) {
+            height: 5.5rem;
+          }
+
+          @include media($xtrasmallscreen-breakpoint) {
+            height: 4.5rem;
+          }
+        } // /.svg-container
+
+        svg {
+          @include media($mediumscreen-breakpoint) {
+            width: 65%;
+          }
+
+          @include media($xtrasmallscreen-breakpoint) {
+            width: 80%;
+          }
+        }
+      } // Queens logo
+
+      span {
+        display: block;
+        line-height: 1.2;
+        height: 4.2rem;
+        margin: $general-margin 0;
+        width: 100%;
+
+        @include media($mediumscreen-breakpoint) {
+          height: 2.5rem;
+          margin-bottom: 0;
+        }
+      }
+
+      a {
+        font-size: 1rem;
+        margin: auto;
+        width: 6.85rem;
+        @include button;
+
+        @include media($tabletscreen-breakpoint) {
+          font-size: 80%;
+          height: auto;
+          padding: 0.5rem 0;
+        }
+      } // /a
+
+      .svg-icon {
+        fill: $nypl-dark-gray;
+        width: 100%;
+      }
+    } // /.logo-block
+  } // /__blocks
+} // /.library-logos
+
+footer {
+  background: $am-teal;
+  margin-top: 10rem;
+
+  @include media($mediumscreen-breakpoint) {
+    margin-top: 8rem;
+  }
+
+  .graphic-container {
+    height: 15rem;
+
+    img {
+      float: right;
+      position: relative;
+      right: 1rem;
+      top: -7.2rem;
+
+      @include media($mediumscreen-breakpoint) {
+        right: -4rem;
+      }
+
+      @include media($xtrasmallscreen-breakpoint) {
+        right: -1.5rem;
+      }
+    }
+  }
 }
