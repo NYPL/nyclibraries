@@ -64,8 +64,8 @@ h4 {
 // Hero Space at the top of the page
 //
 .hero {
-  background-color: $nypl-red;
-  background-image: url('../img/iconsForward.png');
+  background-color: darken($nypl-red, 8%);
+  background-image: url("../img/iconsForward.png");
   background-position: top -1rem left 0;
   background-repeat: repeat-x;
   background-size: contain;
