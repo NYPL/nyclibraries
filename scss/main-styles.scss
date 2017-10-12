@@ -65,31 +65,32 @@ h4 {
 //
 .hero {
   background-color: darken($nypl-red, 8%);
-  background-image: url("../img/iconsForward.png");
-  background-position: top -1rem left 0;
-  background-repeat: repeat-x;
-  background-size: contain;
+  background-image: url("../img/iconBG.png");
+  background-position: top;
+  background-repeat: repeat;
+  background-size: cover;
   color: $nypl-white;
   padding: ($general-padding * 2) 0 0;
   text-align: center;
 
   @include media($largescreen-breakpoint) {
-    background-position: top -5.25rem left 0;
+    background-position: top;
     background-size: 50%;
   }
 
   @include media($tabletscreen-breakpoint) {
-    background-position: center center, center center;
+    background-position: top;
     background-size: 60%;
   }
 
   @include media($mediumscreen-breakpoint) {
-    background-position: center center, center center;
-    background-size: 100%;
+    background-position: top -2rem left 0;
+    background-size: 140%;
   }
 
   @include media($xtrasmallscreen-breakpoint) {
-    background-size: 130%;
+    background-position: top;
+    background-size: cover;
   }
 
   span {
@@ -202,6 +203,12 @@ h4 {
       @include media($mediumscreen-breakpoint) {
         width: 100%;
       }
+
+      @include media($xtrasmallscreen-breakpoint) {
+        border-bottom: 1px solid transparentize($nypl-teal-dark, 0.8);
+        margin-bottom: ($general-margin * 2);
+        padding-bottom: ($general-padding * 2);
+        }
 
       .svg-container {
 
