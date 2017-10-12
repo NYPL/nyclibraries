@@ -662,6 +662,7 @@ h4 {
   background-repeat: repeat;
   background-size: cover;
   color: #fff;
+  margin-bottom: 3rem;
   padding: 2rem 0 0;
   text-align: center; }
   @media (max-width: 1440px) {
@@ -867,7 +868,10 @@ h4 {
       width: 70%; } }
   @media (max-width: 483px) {
     .library-logos__blocks.logo-block.brooklyn-logo .svg-container {
-      height: 5.5rem; } }
+      height: 4rem; } }
+  @media (max-width: 320px) {
+    .library-logos__blocks.logo-block.brooklyn-logo .svg-container {
+      height: 4rem; } }
   .library-logos__blocks.logo-block.brooklyn-logo svg {
     height: 4rem; }
   @media (max-width: 320px) {
