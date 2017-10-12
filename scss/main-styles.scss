@@ -201,14 +201,17 @@ h4 {
       width: 33%;
 
       @include media($mediumscreen-breakpoint) {
-        width: 100%;
-      }
-
-      @include media($xtrasmallscreen-breakpoint) {
         border-bottom: 1px solid transparentize($nypl-teal-dark, 0.8);
         margin-bottom: ($general-margin * 2);
         padding-bottom: ($general-padding * 2);
-        }
+        width: 100%;
+      }
+
+      // @include media($xtrasmallscreen-breakpoint) {
+      //   border-bottom: 1px solid transparentize($nypl-teal-dark, 0.8);
+      //   margin-bottom: ($general-margin * 2);
+      //   padding-bottom: ($general-padding * 2);
+      //   }
 
       .svg-container {
 
