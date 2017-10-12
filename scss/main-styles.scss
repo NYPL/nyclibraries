@@ -244,7 +244,11 @@ h4 {
 
         .svg-container {
           @include media($mediumscreen-breakpoint) {
-            height: 5.5rem;
+            height: 4rem;
+          }
+
+          @include media($xtrasmallscreen-breakpoint) {
+            height: 4rem;
           }
         }
 
