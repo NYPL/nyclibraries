@@ -656,29 +656,31 @@ h4 {
     font-weight: 200; }
 
 .hero {
-  background-color: #d0343a;
-  background-image: url("../img/iconBG.png"), url("../img/iconsForward.png");
-  background-position: center center, top -1rem left 0;
-  background-repeat: repeat-x, repeat-x;
-  background-size: 35%, contain;
+  background-color: #b2292e;
+  background-image: url("../img/iconBG.png");
+  background-position: top;
+  background-repeat: repeat;
+  background-size: cover;
   color: #fff;
-  padding: 2rem 0 2.5rem;
+  margin-bottom: 3rem;
+  padding: 2rem 0 0;
   text-align: center; }
   @media (max-width: 1440px) {
     .hero {
-      background-position: center center, top -5.25rem left 0;
-      background-size: 40%, 50%; } }
+      background-position: top;
+      background-size: 50%; } }
   @media (max-width: 1040px) {
     .hero {
-      background-position: center center, center center;
-      background-size: 40%, 60%; } }
+      background-position: top;
+      background-size: 60%; } }
   @media (max-width: 483px) {
     .hero {
-      background-position: center center, center center;
-      background-size: 65%, 100%; } }
+      background-position: top -2rem left 0;
+      background-size: 140%; } }
   @media (max-width: 320px) {
     .hero {
-      background-size: 100%, 130%; } }
+      background-position: top;
+      background-size: cover; } }
   .hero span {
     display: block;
     font-size: 1.65rem;
@@ -691,6 +693,9 @@ h4 {
     @media (max-width: 320px) {
       .hero span {
         font-size: 1rem; } }
+    .hero span.spanish-subhead {
+      font-size: 1rem;
+      margin-top: 1rem; }
   .hero .header-image {
     text-align: center;
     width: 100%; }
@@ -833,12 +838,21 @@ h4 {
       padding: 0;
       width: auto; } }
 
+.program-details:nth-child(2) {
+  margin-top: 3.5rem; }
+  @media (max-width: 320px) {
+    .program-details:nth-child(2) h2 {
+      line-height: 1.2; } }
+
 .library-logos__blocks.logo-block {
   display: block;
   text-align: center;
   width: 33%; }
   @media (max-width: 483px) {
     .library-logos__blocks.logo-block {
+      border-bottom: 1px solid rgba(4, 112, 116, 0.2);
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
       width: 100%; } }
   @media (max-width: 1440px) {
     .library-logos__blocks.logo-block .svg-container {
@@ -854,7 +868,10 @@ h4 {
       width: 70%; } }
   @media (max-width: 483px) {
     .library-logos__blocks.logo-block.brooklyn-logo .svg-container {
-      height: 5.5rem; } }
+      height: 4rem; } }
+  @media (max-width: 320px) {
+    .library-logos__blocks.logo-block.brooklyn-logo .svg-container {
+      height: 4rem; } }
   .library-logos__blocks.logo-block.brooklyn-logo svg {
     height: 4rem; }
   @media (max-width: 320px) {
@@ -869,10 +886,10 @@ h4 {
       margin-bottom: 1rem; } }
   @media (max-width: 483px) {
     .library-logos__blocks.logo-block.queens-logo .svg-container {
-      height: 5.5rem; } }
+      height: 3.5rem; } }
   @media (max-width: 320px) {
     .library-logos__blocks.logo-block.queens-logo .svg-container {
-      height: 4.5rem; } }
+      height: 2.5rem; } }
   @media (max-width: 483px) {
     .library-logos__blocks.logo-block.queens-logo svg {
       width: 65%; } }
@@ -882,9 +899,14 @@ h4 {
   .library-logos__blocks.logo-block span {
     display: block;
     line-height: 1.2;
-    height: 4.2rem;
     margin: 1rem 0;
     width: 100%; }
+    @media (max-width: 1440px) {
+      .library-logos__blocks.logo-block span {
+        height: 4.2rem; } }
+    @media (max-width: 1040px) {
+      .library-logos__blocks.logo-block span {
+        height: 6.2rem; } }
     @media (max-width: 483px) {
       .library-logos__blocks.logo-block span {
         height: 2.5rem;
@@ -932,9 +954,6 @@ footer {
       position: relative;
       right: 1rem;
       top: -7.2rem; }
-      @media (max-width: 483px) {
-        footer .graphic-container img {
-          right: -4rem; } }
       @media (max-width: 320px) {
         footer .graphic-container img {
           right: -1.5rem; } }
