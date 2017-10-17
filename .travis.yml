@@ -1,8 +1,6 @@
 language: generic
 before_deploy:
   pip install --user awscli
-  on:
-    branch: qa
 deploy:
   provider: script
   script: ~/.local/bin/aws s3 sync dist s3://qa-nyclibraries.org --region=us-east-1 --delete
