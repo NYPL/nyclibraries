@@ -3,7 +3,7 @@ before_deploy:
   pip install --user awscli
 deploy:
   provider: script
-  script: ~/.local/bin/aws s3 sync dist s3://qa-nyclibraries.org --region=us-east-1 --delete
+  script: ~/.local/bin/aws s3 sync NYPL/newstart-2017 s3://qa-nyclibraries.org --region=us-east-1 --delete
   skip_cleanup: true
   on:
     branch: qa
