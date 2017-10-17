@@ -3,7 +3,7 @@ before_deploy:
   pip install --user awscli
 deploy:
   provider: script
-  script: ~/.local/bin/aws s3 sync $TRAVIS_BUILD_DIR s3://qa-nyclibraries.org --region=us-east-1 --delete
+  script: ~/.local/bin/aws s3 sync $TRAVIS_BUILD_DIR s3://qa-nyclibraries.org --region=us-east-1 --delete --acl public-read --exclude ".git"
   skip_cleanup: true
   on:
     branch: qa
