@@ -11,3 +11,6 @@ doc
 
 
 node_modules
+
+#ignore artwork files
+*.ai
