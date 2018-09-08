@@ -6,4 +6,4 @@ deploy:
   script: ~/.local/bin/aws s3 sync $TRAVIS_BUILD_DIR s3://production-nyclibraries.org --region=us-east-1 --delete --acl public-read --exclude ".git/*" --exclude "index.html" --exclude ".*"
   skip_cleanup: true
   on:
-    branch: qa
+    branch: production
