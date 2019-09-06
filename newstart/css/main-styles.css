@@ -657,7 +657,7 @@ h4 {
 
 .hero {
   background-color: #b2292e;
-  background-image: url("../img/iconBG.png");
+  background-image: url("../newstart/img/iconBG.png");
   background-position: top;
   background-repeat: repeat;
   background-size: cover;
@@ -894,12 +894,15 @@ h4 {
   @media (max-width: 320px) {
     .library-logos__blocks.logo-block.queens-logo .svg-container {
       height: 2.5rem; } }
-  @media (max-width: 483px) {
-    .library-logos__blocks.logo-block.queens-logo svg {
-      width: 65%; } }
-  @media (max-width: 320px) {
-    .library-logos__blocks.logo-block.queens-logo svg {
-      width: 80%; } }
+  .library-logos__blocks.logo-block.queens-logo svg {
+    height: 80px;
+    width: 150px; }
+    @media (max-width: 483px) {
+      .library-logos__blocks.logo-block.queens-logo svg {
+        width: 65%; } }
+    @media (max-width: 320px) {
+      .library-logos__blocks.logo-block.queens-logo svg {
+        width: 80%; } }
   .library-logos__blocks.logo-block span {
     display: block;
     line-height: 1.2;
