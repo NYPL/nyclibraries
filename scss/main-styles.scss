@@ -304,6 +304,9 @@ h4 {
         } // /.svg-container
 
         svg {
+          height: 80px;
+          width: 150px;
+
           @include media($mediumscreen-breakpoint) {
             width: 65%;
           }
