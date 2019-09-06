@@ -64,12 +64,12 @@ h4 {
 // Hero Space at the top of the page
 //
 .hero {
-  background-color: darken($nypl-red, 8%);
-  background-image: url("../newstart/img/iconBG.png");
+  background-color: #FFF;
+  background-image: url("../img/iconBG.png");
   background-position: top;
   background-repeat: repeat;
   background-size: cover;
-  color: $nypl-white;
+  color: #000;
   margin-bottom: ($general-margin * 3);
   padding: ($general-padding * 2) 0 0;
   text-align: center;

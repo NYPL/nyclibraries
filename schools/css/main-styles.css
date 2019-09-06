@@ -656,12 +656,12 @@ h4 {
     font-weight: 200; }
 
 .hero {
-  background-color: #b2292e;
-  background-image: url("../newstart/img/iconBG.png");
+  background-color: #FFF;
+  background-image: url("../img/iconBG.png");
   background-position: top;
   background-repeat: repeat;
   background-size: cover;
-  color: #fff;
+  color: #000;
   margin-bottom: 3rem;
   padding: 2rem 0 0;
   text-align: center; }
@@ -694,8 +694,12 @@ h4 {
       .hero span {
         font-size: 1rem; } }
     .hero span.spanish-subhead {
-      font-size: 1rem;
+      font-size: 1.3rem;
       margin-top: 1rem; }
+    .hero span.chinese-subhead {
+      font-size: 1.41rem;
+      font-weight: 200;
+      letter-spacing: 0.125rem; }
   .hero .header-image {
     text-align: center;
     width: 100%; }
