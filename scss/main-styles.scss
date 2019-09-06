@@ -64,12 +64,11 @@ h4 {
 // Hero Space at the top of the page
 //
 .hero {
-  background-color: darken($nypl-red, 8%);
-  background-image: url("../newstart/img/iconBG.png");
+  background-color: #FFF;
   background-position: top;
   background-repeat: repeat;
   background-size: cover;
-  color: $nypl-white;
+  color: #000;
   margin-bottom: ($general-margin * 3);
   padding: ($general-padding * 2) 0 0;
   text-align: center;
@@ -126,7 +125,7 @@ h4 {
     width: 100%;
 
     @include media($largescreen-breakpoint) {
-      height: 11rem;
+      height: 20rem;
     }
 
     @include media($tabletscreen-breakpoint) {
@@ -310,6 +309,9 @@ h4 {
         } // /.svg-container
 
         svg {
+          height: 80px;
+          width: 150px;
+
           @include media($mediumscreen-breakpoint) {
             width: 65%;
           }
