@@ -651,33 +651,73 @@ h4 {
   color: #047074; }
   h2.chinese-text,
   h3.chinese-text,
-  h4.chinese-text,
-  div.chinese-text {
+  h4.chinese-text {
     font-size: 1.5rem;
     font-weight: 200; }
 
 .hero {
+  background-color: #b2292e;
+  background-image: url("../newstart/img/iconBG.png");
+  background-position: top;
+  background-repeat: repeat;
+  background-size: cover;
+  color: #fff;
   margin-bottom: 3rem;
   padding: 2rem 0 0;
   text-align: center; }
-.hero div {
-  font-size: 1.5rem;
-  font-weight: bold; }
-.hero .header-image {
-  text-align: center;
-  width: 100%; }
-@media (max-width: 320px) {
+  @media (max-width: 1440px) {
+    .hero {
+      background-position: top;
+      background-size: 50%; } }
+  @media (max-width: 1040px) {
+    .hero {
+      background-position: top;
+      background-size: 60%; } }
+  @media (max-width: 483px) {
+    .hero {
+      background-position: top -2rem left 0;
+      background-size: 140%; } }
+  @media (max-width: 320px) {
+    .hero {
+      background-position: top;
+      background-size: cover; } }
+  .hero span {
+    display: block;
+    font-size: 1.65rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 4px rgba(60, 60, 60, 0.5);
+    text-transform: uppercase; }
+    @media (max-width: 483px) {
+      .hero span {
+        font-size: 1.25rem; } }
+    @media (max-width: 320px) {
+      .hero span {
+        font-size: 1rem; } }
+    .hero span.spanish-subhead {
+      font-size: 1rem;
+      margin-top: 1rem; }
   .hero .header-image {
-    height: 6rem;
-    margin-left: 1%; } }
-.hero .header-image img {
-  height: 20rem; }
-@media (max-width: 1040px) {
-  .hero .header-image img {
-    height: 12rem; } }
-@media (max-width: 320px) {
-  .hero .header-image img {
-    height: 6rem; } }
+    text-align: center;
+    width: 100%; }
+    @media (max-width: 1440px) {
+      .hero .header-image {
+        height: 11rem; } }
+    @media (max-width: 1040px) {
+      .hero .header-image {
+        height: 9rem; } }
+    @media (max-width: 320px) {
+      .hero .header-image {
+        height: 6rem;
+        margin-left: 1%; } }
+    .hero .header-image img {
+      height: 11rem; }
+      @media (max-width: 1040px) {
+        .hero .header-image img {
+          height: 9rem;
+          width: 100%; } }
+      @media (max-width: 320px) {
+        .hero .header-image img {
+          height: 6rem; } }
 
 .full-width-wrapper {
   max-width: calc(82rem - (2rem));
@@ -850,12 +890,15 @@ h4 {
   @media (max-width: 320px) {
     .library-logos__blocks.logo-block.queens-logo .svg-container {
       height: 2.5rem; } }
-  @media (max-width: 483px) {
-    .library-logos__blocks.logo-block.queens-logo svg {
-      width: 65%; } }
-  @media (max-width: 320px) {
-    .library-logos__blocks.logo-block.queens-logo svg {
-      width: 80%; } }
+  .library-logos__blocks.logo-block.queens-logo svg {
+    height: 80px;
+    width: 150px; }
+    @media (max-width: 483px) {
+      .library-logos__blocks.logo-block.queens-logo svg {
+        width: 65%; } }
+    @media (max-width: 320px) {
+      .library-logos__blocks.logo-block.queens-logo svg {
+        width: 80%; } }
   .library-logos__blocks.logo-block span {
     display: block;
     line-height: 1.2;
