@@ -125,7 +125,7 @@ h4 {
     width: 100%;
 
     @include media($largescreen-breakpoint) {
-      height: 11rem;
+      height: 20rem;
     }
 
     @include media($tabletscreen-breakpoint) {

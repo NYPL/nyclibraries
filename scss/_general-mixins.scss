@@ -35,7 +35,7 @@
   $width: null
   ) {
   background-color: $nypl-white;
-  border: 0.125rem solid $nypl-teal;
+  border: 0.125rem solid $nypl-alt-teal;
   border-radius: 0.85rem;
   color: $nypl-teal-dark;
   display: block;
@@ -50,7 +50,7 @@
   @content;
 
   &:hover {
-    background-color: $nypl-teal;
+    background-color: $nypl-alt-teal;
     border-color: $nypl-white;
     color: $nypl-white;
   }

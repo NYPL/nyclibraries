@@ -704,7 +704,7 @@ h4 {
     width: 100%; }
     @media (max-width: 1440px) {
       .hero .header-image {
-        height: 11rem; } }
+        height: 20rem; } }
     @media (max-width: 1040px) {
       .hero .header-image {
         height: 9rem; } }
@@ -922,7 +922,7 @@ h4 {
     margin: auto;
     width: 6.85rem;
     background-color: #fff;
-    border: 0.125rem solid #07818d;
+    border: 0.125rem solid #0071E2;
     border-radius: 0.85rem;
     color: #047074;
     display: block;
@@ -933,7 +933,7 @@ h4 {
     text-decoration: none;
     text-transform: uppercase; }
     .library-logos__blocks.logo-block a:hover {
-      background-color: #07818d;
+      background-color: #0071E2;
       border-color: #fff;
       color: #fff; }
     .library-logos__blocks.logo-block a:focus {
