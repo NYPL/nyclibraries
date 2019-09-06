@@ -694,8 +694,12 @@ h4 {
       .hero span {
         font-size: 1rem; } }
     .hero span.spanish-subhead {
-      font-size: 1rem;
+      font-size: 1.3rem;
       margin-top: 1rem; }
+    .hero span.chinese-subhead {
+      font-size: 1.41rem;
+      font-weight: 200;
+      letter-spacing: 0.125rem; }
   .hero .header-image {
     text-align: center;
     width: 100%; }

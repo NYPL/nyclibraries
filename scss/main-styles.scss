@@ -110,8 +110,14 @@ h4 {
     }
 
     &.spanish-subhead {
-      font-size: 1rem;
+      font-size: 1.3rem;
       margin-top: $general-margin;
+    }
+
+    &.chinese-subhead {
+      font-size: 1.41rem;
+      font-weight: 200;
+      letter-spacing: 0.125rem;
     }
   }
 
