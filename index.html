@@ -2,7 +2,22 @@
 <html class="no-js" lang="en">
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <!-- Initial Data Layer Definition -->
+  <script>
+    // First define the global variable for the entire data layer array
+    window.adobeDataLayer = window.adobeDataLayer || [];
+    // Then push in the variables required in the Initial Data Layer Definition
+    window.adobeDataLayer.push({
+      page_name: "nyclibraries|home",
+      site_section: "nyclibraries"
+    });
+  </script>
+  <!-- Tag Manager Library Script -->
+  <script src="https://assets.adobedtm.com/1a9376472d37/8a65380e4608/launch-67c3e629202e.min.js" async></script>
+
+	
+	<!-- Global site tag (gtag.js) - Google Analytics UA -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1420324-146"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -266,6 +281,7 @@
   </div>
 
 
+  
 </main>
 <script src="js/vendor/modernizr-3.5.0.min.js"></script>
 </body>
