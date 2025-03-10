@@ -31,4 +31,4 @@ jobs:
         run: pip install --user awscli
 
       - name: Sync files to S3
-        run: aws s3 sync ${{ env.GITHUB_ACTION_PATH }} s3://qa-nyclibraries.org --region=${{ env.AWS_REGION }} --delete --acl public-read --exclude ".git/*" --exclude "index.html" --exclude ".*"
+        run: aws s3 sync ./ s3://qa-nyclibraries.org --region=${{ env.AWS_REGION }} --delete --acl public-read --exclude ".git/*" --exclude "index.html" --exclude ".*"
