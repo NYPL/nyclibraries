@@ -6,7 +6,7 @@ on:
     branches: 
         - qa
 env:
-  env.AWS_ACCOUNT: "946183545209"
+  AWS_ACCOUNT: "946183545209"
   AWS_REGION: us-east-1
   ENVIRONMENT: qa
 permissions:
