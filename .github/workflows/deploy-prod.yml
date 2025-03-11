@@ -1,20 +1,20 @@
-# On merge into the `qa` branch, build the image and deploy to ECR.
+# On merge into the `prod` branch, build the image and deploy to ECR.
 # This is on `nypl-digital-dev` account.
-name: Publish qa
+name: Publish prod
 on:
   push:
     branches:
-      - qa
+      - production
 env:
   AWS_ACCOUNT: "946183545209"
   AWS_REGION: us-east-1
-  ENVIRONMENT: qa
+  ENVIRONMENT: prod
 permissions:
   id-token: write
   contents: read
 
 jobs:
-  publish_qa:
+  publish_prod:
     name: Publish files to S3
     runs-on: ubuntu-latest
     steps:
@@ -31,4 +31,4 @@ jobs:
         run: pip install --user awscli
 
       - name: Sync files to S3
-        run: aws s3 sync ./ s3://qa-nyclibraries.org --region=${{ env.AWS_REGION }} --delete --acl public-read --exclude ".git/*" --exclude "index.html" --exclude ".*"
+        run: aws s3 sync ./ s3://production-nyclibraries.org --region=${{ env.AWS_REGION }} --delete --acl public-read --exclude ".git/*" --exclude "index.html" --exclude ".*"
