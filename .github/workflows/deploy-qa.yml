@@ -1,0 +1,34 @@
+# On merge into the `qa` branch, build the image and deploy to ECR.
+# This is on `nypl-digital-dev` account.
+name: Publish qa
+on:
+  push:
+    branches:
+      - qa
+env:
+  AWS_ACCOUNT: "946183545209"
+  AWS_REGION: us-east-1
+  ENVIRONMENT: qa
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  publish_qa:
+    name: Publish files to S3
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT }}:role/GithubActionsDeployerRole
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Install AWSCLI package
+        run: pip install --user awscli
+
+      - name: Sync files to S3
+        run: aws s3 sync ./ s3://qa-nyclibraries.org --region=${{ env.AWS_REGION }} --delete --acl public-read --exclude ".git/*" --exclude "index.html" --exclude ".*"
