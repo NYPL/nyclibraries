@@ -15,8 +15,8 @@
     "url": "https://github.com/NYPL/newstart-2017.git"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^3.0.4",
     "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
+    "gulp-sass": "^6.0.1"
   }
 }
